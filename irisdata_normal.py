@@ -109,7 +109,6 @@ for i in range(1): #No of times the entire model is run
 	
 	mean_acc3+=mean_acc2
 
-mean_acc3/=outerloop
 f.write("Outermost loop: "+str(mean_acc3)+"\n")
 f.write("---------------------------------------------------------------------\n")
 now = datetime.now()
