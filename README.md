@@ -12,4 +12,3 @@ This repository shall contain the different programs that i will have tried over
   No regulirasation is then used
   Finally the model is compiled, tested and trained with 1000 epochs with each weight initialisation. All the output accuracies are written in a file
   
- 2. Same as above, except with L2 regularisation.
