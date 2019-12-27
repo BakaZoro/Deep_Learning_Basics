@@ -3,7 +3,7 @@ import numpy as np
 import glob
 
 img_array = []
-for filename in glob.glob('*.png'):
+for filename in glob.glob('*.png'):  #Assuming your photos are in the same folder as the script. else specify the file name
     img = cv2.imread(filename)
     height, width, layers = img.shape
     size = (width,height)
