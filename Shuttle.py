@@ -34,12 +34,12 @@ for i in range(data_X.shape[1]):
 
 
 #MERGING THE TWO MATRIXES
-iris_data=np.column_stack((data_X,y_enc))
+# iris_data=np.column_stack((data_X,y_enc))
 
 #CREATING NEURAL NETWORK
 
 model = Sequential()
-model.add(Dense(4, input_shape=(4,),activation='linear',use_bias=True,kernel_initializer='glorot_uniform')) 
+model.add(Dense(4, input_shape=(4,),activation='relu',use_bias=True,kernel_initializer='glorot_uniform')) 
 model.add(Dense(5,activation='relu',use_bias=True,kernel_initializer='glorot_uniform')) 
 model.add(Dense(3,activation='sigmoid',use_bias=True,kernel_initializer='glorot_uniform'))
 
@@ -59,9 +59,21 @@ ax = fig.add_subplot(111, projection='3d')
 class PredictionCallback(tf.keras.callbacks.Callback): 
   def on_epoch_end(self, epoch, logs={}):
     y_pred = self.model.predict(data_X)
-    ax.scatter(y_pred[:,0],y_pred[:,1],y_pred[:,2],c='b')
-    ax.scatter(y_enc[:,0],y_enc[:,1],y_enc[:,2],c='r')
-    # ax.plot(y_pred,y_enc,c='g')
+    x=[]
+    y=[]
+    z=[]
+    for i in range(y_enc.shape[0]):
+    	
+    	x.append(y_enc[i,0])
+    	x.append(y_pred[i,0]) 
+    	y.append(y_enc[i,1])
+    	y.append(y_pred[i,1])
+    	z.append(y_enc[i,2])
+    	z.append(y_pred[i,2])
+
+    ax.scatter3D(y_pred[:,0],y_pred[:,1],y_pred[:,2],c='b')
+    ax.scatter3D(y_enc[:,0],y_enc[:,1],y_enc[:,2],c='r')
+    ax.plot3D(x,y,z,c='g')
     ax.set_xlabel("Class 0")
     ax.set_ylabel("Class 1")
     ax.set_zlabel("Class 2")
@@ -72,5 +84,5 @@ class PredictionCallback(tf.keras.callbacks.Callback):
 
 #TRAINING THE MODEL
 
-model.fit(data_X, y_enc, batch_size=15, epochs=1000,callbacks=[PredictionCallback()],verbose=1)
+model.fit(data_X, y_enc, batch_size=30, epochs=500,callbacks=[PredictionCallback()],verbose=1)
 # plt.show()
