@@ -32,10 +32,6 @@ for i in range(data_X.shape[1]):
 	for j in range(data_X.shape[0]):
 		data_X[j,i]=(data_X[j,i]-mean[i])/std_dev[i]  ##Z SCORE
 
-
-#MERGING THE TWO MATRIXES
-# iris_data=np.column_stack((data_X,y_enc))
-
 #CREATING NEURAL NETWORK
 
 model = Sequential()
@@ -85,4 +81,4 @@ class PredictionCallback(tf.keras.callbacks.Callback):
 #TRAINING THE MODEL
 
 model.fit(data_X, y_enc, batch_size=30, epochs=500,callbacks=[PredictionCallback()],verbose=1)
-# plt.show()
+
