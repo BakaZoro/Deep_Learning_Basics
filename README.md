@@ -15,4 +15,6 @@ This repository shall contain the different programs that I will have tried over
 𝟔. 𝐕𝐢𝐝𝐞𝐨.𝐩𝐲: A python program that finds a set of images and then formas a video using those image seqeunces.
 
 𝟕. 𝐌𝐍𝐈𝐒𝐓_𝐌𝐋𝐏.𝐩𝐲:MLP on MNIST dataset,Z-score Normalisation, 10 fold cross validation, 1 Hot encoding, 3 layer MLP with sigmoid at hidden layer and softmax at output. Weight initialisation for each fold is done 10 times. And since 10 fold cross validation in itself is repeated 100 times, that makes it 1000 times. No regulirasation is done. Finally the model is compiled, tested and trained with 20 epochs with each weight initialisation. All the output accuracies are written in a file.
+
+𝟖. 𝐓𝐞𝐱𝐭𝟐𝐍𝐮𝐦.𝐢𝐩𝐲𝐧𝐛: When handling text data for Machine Learning problems, the data needs to be pre-processed. Even though quite a few ML algorithms nowadays can handle textual data without being converted into numerical data nut many that are implemented using the sklearn library cannot. The tree methods present require the textual data to be converted into numerical form. Hence Text2Num contains three such methods, "CountVectorizer, "TF-IDF Vectroizer" and "Hashing Vectorizer" that help in converting text data to machine readable format.
  
