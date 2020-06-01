@@ -20,5 +20,4 @@ This repository shall contain the different programs that I will have tried over
 
 𝟗. 𝐓𝐞𝐱𝐭𝟐𝐍𝐮𝐦.𝐢𝐩𝐲𝐧𝐛: When handling text data for Machine Learning problems, the data needs to be pre-processed. Even though quite a few ML algorithms nowadays can handle textual data without being converted into numerical data nut many that are implemented using the sklearn library cannot. The tree methods present require the textual data to be converted into numerical form. Hence Text2Num contains three such methods, "CountVectorizer, "TF-IDF Vectroizer" and "Hashing Vectorizer" that help in converting text data to machine readable format.
 
-
  
