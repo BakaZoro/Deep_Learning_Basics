@@ -16,5 +16,5 @@ This repository shall contain the different programs that I will have tried over
 
 𝟕. 𝐌𝐍𝐈𝐒𝐓_𝐌𝐋𝐏.𝐩𝐲:MLP on MNIST dataset,Z-score Normalisation, 10 fold cross validation, 1 Hot encoding, 3 layer MLP with sigmoid at hidden layer and softmax at output. Weight initialisation for each fold is done 10 times. And since 10 fold cross validation in itself is repeated 100 times, that makes it 1000 times. No regulirasation is done. Finally the model is compiled, tested and trained with 20 epochs with each weight initialisation. All the output accuracies are written in a file.
 
-9.PyTorchNN.ipynb: A simple neural network using PyTorch
+##### 8.PyTorchNN.ipynb: A simple neural network using PyTorch
  
