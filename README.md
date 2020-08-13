@@ -19,3 +19,5 @@ This repository shall contain the different programs that I will have tried over
 ##### 8.PyTorchNN.ipynb: A simple neural network using PyTorch
  
 ##### 9.PyTorchRNN.ipynb: A simple RNN using PyTorch that supports a limited number of input and output
+
+##### 10. PyTorchRNN_Improved.ipynb: A simple RNN using PyTorch that uses the built in module RNNCell and handles the weights by itsel and is thus capable of handling larger inputs and outputs
